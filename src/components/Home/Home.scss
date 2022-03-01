@@ -1,0 +1,70 @@
+@import 'src/styles/Variables';
+@import 'src/styles/Mixins';
+
+header h1 {
+  font-size: 48px;
+  margin: 3% 20%;
+}
+.main-wrapper {
+  width: 750px;
+  margin: auto;
+}
+
+.search-sort-container {
+  @include flex-align-center;
+  padding: 0 25px;
+  margin-bottom: 10px;
+
+  .sort {
+    height: 16px;
+    margin-right: 13px;
+    transform: rotate(180deg);
+    transition: transform 0.5s;
+
+    &:active {
+      transform: rotate(0deg);
+      transition: 0s;
+    }
+  }
+
+  .search-wrapper {
+    border-bottom: 2px solid #000000;
+    margin-right: auto;
+
+    img {
+      width: 18px;
+      vertical-align: -webkit-baseline-middle;
+    }
+
+    input {
+      background: transparent;
+      border: none;
+      outline: none;
+      vertical-align: -webkit-baseline-middle;
+    }
+  }
+
+  img {
+    cursor: pointer;
+  }
+
+  .view-button {
+    img {
+      transform: rotate(360deg);
+      transition: transform 0.5s;
+    }
+
+    img:active {
+      transform: rotate(0deg);
+      transition: 0s;
+    }
+  }
+}
+
+.results {
+  @include flex-align-center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}

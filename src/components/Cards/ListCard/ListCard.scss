@@ -1,0 +1,74 @@
+@import 'src/styles/Variables';
+@import 'src/styles/Mixins';
+
+.list-card-container {
+  @include flex-align-center;
+  background: var(--white);
+  width: 100%;
+  border-radius: 20px;
+  height: 100px;
+  position: relative;
+  margin: 10px 0;
+
+  .colored-part {
+    width: 70px;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    .shape {
+      position: absolute;
+      background-color: transparent;
+      bottom: -63px;
+      height: 63px;
+      width: 57px;
+      border-top-left-radius: 50px;
+      transform: rotateY(180deg) rotateZ(90deg);
+      left: 66px;
+      top: -3px;
+      .inner {
+        position: absolute;
+        background-color: transparent;
+        bottom: -7px;
+        height: 57px;
+        width: 13px;
+        border-top-left-radius: 38px;
+        top: 18px;
+      }
+    }
+  }
+
+  .user-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    position: absolute;
+    top: calc(50% - 40px);
+    left: 30px;
+  }
+  .name-location-box {
+    position: absolute;
+    left: 132px;
+    display: flex;
+    flex-direction: column;
+    span:nth-child(1) {
+      font-family: Karla, sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 3px;
+    }
+    span:nth-child(2) {
+      font-family: Lato, sans-serif;
+      font-size: 14px;
+    }
+  }
+
+  .contact {
+    position: absolute;
+    right: 33px;
+    img:nth-child(1) {
+      margin-right: 10px;
+    }
+  }
+}
